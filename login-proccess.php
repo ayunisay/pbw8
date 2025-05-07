@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($query) > 0) {
         $_SESSION['name'] = $data['name'];
         $_SESSION['success'] = "Welcome " . $_SESSION['name'] . " to the Dashboard Page";
-        header("Location:dashboard.php");
+        header("Location:index.php");
     } else {
         $_SESSION['danger'] = "Login failed, wrong password";
         header("Location:login.php");
